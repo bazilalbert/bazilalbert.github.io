@@ -1,4 +1,4 @@
-# Albert [Your Last Name]
+# CHIRAPPANATH ALBERT
 ### 🎯 I drive Digital Adoption by transforming complex SaaS features into clear, actionable user experiences.
 
 My foundation is in **Technical Writing and Content Strategy**, which taught me the power of absolute clarity. I moved into Product Analysis and Digital Adoption because I saw documentation as more than just help—it's a **growth lever**. I focus on designing the entire content ecosystem to reduce confusion and accelerate time-to-value.
@@ -15,4 +15,4 @@ My foundation is in **Technical Writing and Content Strategy**, which taught me 
 
 **If you need an expert who blends content, analytics, and product strategy to build user confidence and drive adoption, let's talk about impact.**
 
-[Portfolio/Docs Examples](https://thegoodocs.com/freebies/portfolio-/) | [LinkedIn](https://www.linkedin.com/help/linkedin/answer/a554351) | [Contact Email](mailto:your.email@example.com)
+| [LinkedIn](https://www.linkedin.com/help/linkedin/answer/a554351) | [Contact Email](mailto:albertbazil@gmail.com)
