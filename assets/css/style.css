@@ -138,11 +138,11 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--white);
+  background: var(--orange-yellow-crayola);
   color: var(--smoky-black);
 }
 
-:focus { outline-color: var(--white); }
+:focus { outline-color: var(--orange-yellow-crayola); }
 
 html { font-family: var(--ff-poppins); }
 
@@ -1869,14 +1869,5 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
-.contact-info {
-  min-width: 0;
-}
-
-.contact-info .contact-link {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 }
