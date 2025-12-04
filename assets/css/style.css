@@ -1871,11 +1871,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
-/* ------------------------------ */
-/*  FLAT SIDEBAR + TOGGLE BUTTON  */
-/* ------------------------------ */
+/* ============================================
+   CUSTOM OVERRIDES FOR SIDEBAR (PLACE AT BOTTOM)
+   ============================================ */
 
-/* 1. Remove sidebar box styling */
+/* Remove sidebar box/card styling */
 .sidebar {
   background: none !important;
   border: none !important;
@@ -1884,52 +1884,61 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 0 !important;
 }
 
-/* Remove avatar background box style */
+/* Remove avatar box background too (optional) */
 .avatar-box {
   background: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
   border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
 
-/* Remove icon boxes visual style */
+/* Remove icon-box card look (optional) */
 .icon-box {
   background: none !important;
   box-shadow: none !important;
   border-radius: 0 !important;
 }
-.icon-box::before { display: none !important; }
-
-/* 2. Hide toggle button on large screens */
-.info_more-btn {
+.icon-box::before {
   display: none !important;
 }
 
-/* 3. Show and style toggle button only on tablets/mobiles */
+/* ============ MOBILE + TABLET (≤ 1024px) ============ */
 @media (max-width: 1024px) {
-  .info_more-btn {
-    display: inline-flex !important;
-    position: absolute;
-    top: 10px;
-    right: 10px;
 
-    background: var(--orange-yellow-crayola) !important;
-    color: var(--smoky-black) !important;
-
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-
-    z-index: 20;
+  /* Sidebar always expanded */
+  .sidebar {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding-bottom: 20px !important;
   }
 
-  .info_more-btn::before {
+  /* Contact info always visible */
+  .sidebar-info_more {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+
+  /* Hide toggle button (not needed) */
+  .info_more-btn {
     display: none !important;
   }
+}
 
-  .info_more-btn:hover {
-    opacity: 0.9;
-    cursor: pointer;
-  }
+/* ============ DESKTOP (> 1024px) ============ */
+/* Keep toggle button working normally */
+.info_more-btn {
+  display: inline-flex !important;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--onyx);
+  color: var(--white-2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  z-index: 10;
+}
+.info_more-btn::before {
+  display: none !important;
 }
