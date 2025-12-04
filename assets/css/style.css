@@ -1869,5 +1869,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
+.contact-info {
+  min-width: 0;
+}
+
+.contact-info .contact-link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 }
