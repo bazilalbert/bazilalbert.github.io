@@ -1,7 +1,7 @@
 ### 🎯 I drive Digital Adoption by transforming complex SaaS features into clear, actionable user experiences.<img src="assets/images/Albert image.png" alt="Albert image" width="120" style="border-radius: 50%;">
 
 
-My foundation is in **Technical Writing and Content Strategy**, which taught me the power of absolute clarity. I moved into Product Analysis and Digital Adoption because I saw documentation as more than just help—it's a **growth lever**. I focus on designing the entire content ecosystem to reduce confusion and accelerate time-to-value.
+My foundation is in **Technical Writing and Content Strategy**, which taught me the power of absolute clarity. I moved into Product Analysis and Digital Adoption because I saw documentation as more than just help—it's a **growth lever**. I focus on designing the entire content ecosystem and improving product experience to reduce confusion and accelerate time-to-value.
 
 ---
 
