@@ -1922,4 +1922,33 @@ textarea.form-input::-webkit-resizer { display: none; }
 .info_more-btn::before {
   display: none !important;
 }
+/* === Restore toggle button (with yellow styling) === */
+
+.info_more-btn {
+  display: inline-flex !important;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: var(--orange-yellow-crayola) !important; /* YELLOW BUTTON */
+  color: var(--smoky-black) !important; /* dark text for contrast */
+
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+
+  z-index: 20;
+  box-shadow: none !important;
+}
+
+/* remove the old layered pseudo effect */
+.info_more-btn::before {
+  display: none !important;
+}
+
+/* the icon inside should also become dark for contrast */
+.info_more-btn ion-icon {
+  color: var(--smoky-black) !important;
+}
 
