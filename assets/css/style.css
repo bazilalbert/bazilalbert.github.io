@@ -79,18 +79,18 @@
   /* font-size */
   --fs-1: 20px;
   --fs-2: 16px;
-  --fs-3: 15X;
-  --fs-4: 15px;
-  --fs-5: 15px;
-  --fs-6: 14px;
-  --fs-7: 13px;
-  --fs-8: 11px;
+  --fs-3: 15px;
+  --fs-4: 14px;
+  --fs-5: 13px;
+  --fs-6: 12px;
+  --fs-7: 11px;
+  --fs-8: 10px;
 
   /* font-weight */
-  --fw-300: 300;
-  --fw-400: 400;
-  --fw-500: 500;
-  --fw-600: 600;
+  --fw-300: 200;
+  --fw-400: 300;
+  --fw-500: 400;
+  --fw-600: 500;
 
   /**
    * shadow
@@ -155,7 +155,7 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { background: var(-#f3f5f7); }
 
 
 
