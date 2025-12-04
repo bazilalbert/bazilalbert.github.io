@@ -1872,27 +1872,32 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 /* ============================================
-   CUSTOM OVERRIDES FOR SIDEBAR (PLACE AT BOTTOM)
+   CUSTOM OVERRIDES FOR SIDEBAR (ALWAYS EXPANDED)
    ============================================ */
 
-/* Remove sidebar box/card styling */
+/* Remove sidebar card/box styling */
 .sidebar {
   background: none !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0 !important;
   border-radius: 0 !important;
+
+  /* Always expanded */
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
 }
 
-/* Remove avatar box background too (optional) */
+/* Remove avatar box visuals (optional) */
 .avatar-box {
   background: none !important;
-  border-radius: 0 !important;
   padding: 0 !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
 }
 
-/* Remove icon-box card look (optional) */
+/* Remove icon-box card look */
 .icon-box {
   background: none !important;
   box-shadow: none !important;
@@ -1902,42 +1907,16 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: none !important;
 }
 
-/* ============ MOBILE + TABLET (≤ 1024px) ============ */
-@media (max-width: 1024px) {
-
-  /* Sidebar always expanded */
-  .sidebar {
-    max-height: none !important;
-    height: auto !important;
-    overflow: visible !important;
-    padding-bottom: 20px !important;
-  }
-
-  /* Contact info always visible */
-  .sidebar-info_more {
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-  }
-
-  /* Hide toggle button (not needed) */
-  .info_more-btn {
-    display: none !important;
-  }
+/* Always show the contact info */
+.sidebar-info_more {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
 }
 
-/* ============ DESKTOP (> 1024px) ============ */
-/* Keep toggle button working normally */
+/* Remove toggle button entirely */
 .info_more-btn {
-  display: inline-flex !important;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--onyx);
-  color: var(--white-2);
-  padding: 8px 12px;
-  border-radius: 8px;
-  z-index: 10;
+  display: none !important;
 }
 .info_more-btn::before {
   display: none !important;
