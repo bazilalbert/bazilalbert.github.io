@@ -1871,9 +1871,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
-/* -------------------------
-   Remove card/box styling for sidebar only
-   ------------------------- */
+/* ------------------------------ */
+/*  FLAT SIDEBAR + TOGGLE BUTTON  */
+/* ------------------------------ */
+
+/* 1. Remove sidebar box styling */
 .sidebar {
   background: none !important;
   border: none !important;
@@ -1882,73 +1884,52 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 0 !important;
 }
 
-/* remove overlay pseudo-element if present */
-.sidebar::before,
-.sidebar .content-card::before,
-.sidebar .info_more-btn::before {
-  display: none !important;
-  content: none !important;
-}
-
-/* tidy avatar box if you want it plain */
+/* Remove avatar background box style */
 .avatar-box {
   background: none !important;
+  box-shadow: none !important;
   padding: 0 !important;
   border-radius: 0 !important;
-  box-shadow: none !important;
 }
-/* your override that removes box styles */
-.sidebar {
+
+/* Remove icon boxes visual style */
+.icon-box {
   background: none !important;
-  border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
   border-radius: 0 !important;
 }
+.icon-box::before { display: none !important; }
 
-
+/* 2. Hide toggle button on large screens */
 .info_more-btn {
-  display: inline-flex !important;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--onyx);
-  color: var(--white-2);
-  padding: 8px 12px;
-  border-radius: 8px;
-  z-index: 10;
-}
-
-.info_more-btn::before {
-  display: none !important;
-}
-/* === Restore toggle button (with yellow styling) === */
-
-.info_more-btn {
-  display: inline-flex !important;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-
-  background: var(--orange-yellow-crayola) !important; /* YELLOW BUTTON */
-  color: var(--smoky-black) !important; /* dark text for contrast */
-
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-
-  z-index: 20;
-  box-shadow: none !important;
-}
-
-/* remove the old layered pseudo effect */
-.info_more-btn::before {
   display: none !important;
 }
 
-/* the icon inside should also become dark for contrast */
-.info_more-btn ion-icon {
-  color: var(--smoky-black) !important;
-}
+/* 3. Show and style toggle button only on tablets/mobiles */
+@media (max-width: 1024px) {
+  .info_more-btn {
+    display: inline-flex !important;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 
+    background: var(--orange-yellow-crayola) !important;
+    color: var(--smoky-black) !important;
+
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+
+    z-index: 20;
+  }
+
+  .info_more-btn::before {
+    display: none !important;
+  }
+
+  .info_more-btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}
