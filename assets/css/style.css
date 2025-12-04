@@ -1516,3 +1516,119 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /* ---------- End of file ---------- */
+/* ---------- Balanced+ improvements (paste at file end) ---------- */
+
+/* typography: slightly stronger headings and roomy paragraph width */
+:root {
+  --heading-text: #0b1220;
+  --muted-text: #55595f;
+  --card-bg: #ffffff;
+  --page-bg: #f6f7f8;
+}
+
+/* overall page tone */
+body {
+  background: var(--page-bg) !important;
+  color: var(--heading-text);
+}
+
+/* container: narrower main for better line length and cleaner center */
+.main-content, .container, .content {
+  max-width: 1050px !important;
+  margin: 30px auto !important;
+  padding: 22px !important;
+}
+
+/* sidebar: slightly wider and anchored */
+.sidebar {
+  width: 300px !important;
+  margin: 28px 32px !important;
+  padding: 22px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98)) !important;
+  box-shadow: 0 12px 30px rgba(11,17,28,0.06) !important;
+  border: 1px solid rgba(11,17,28,0.04) !important;
+}
+
+/* Sidebar avatar rounding and slight border */
+.avatar-box {
+  border-radius: 16px !important;
+  padding: 12px !important;
+  background: #fff !important;
+  border: 1px solid rgba(11,17,28,0.03) !important;
+}
+
+/* headings: clearer scale */
+.h2 { font-size: 34px !important; letter-spacing: -0.4px; color: var(--heading-text); }
+.h3 { font-size: 22px !important; color: var(--heading-text); }
+
+/* body copy: better contrast and line length */
+.about-text, p, .muted, .contact-info {
+  color: var(--muted-text) !important;
+  max-width: 75ch;
+  line-height: 1.7;
+}
+
+/* cards: subtle border + soft inner highlight */
+.content-card, .service-item, .card, .project-item > a, .blog-post-item > a {
+  background: var(--card-bg) !important;
+  border: 1px solid rgba(11,17,28,0.04) !important;
+  box-shadow: 0 8px 20px rgba(11,17,28,0.05) !important;
+  border-radius: 12px !important;
+  padding: 18px !important;
+}
+
+/* lighten the inner gradient overlay (if present) */
+.content-card::before,
+.service-item::before,
+.blog-post-item > a::before {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(245,247,249,0.95)) !important;
+  opacity: 1 !important;
+}
+
+/* reduce the heavy floating feel (smaller gaps, more grid control) */
+.services-grid, .cards-grid, .features-grid, .project-list, .blog-posts-list {
+  gap: 14px !important;
+}
+
+/* tighten testimonial card spacing and anchor avatar */
+.testimonials-list { padding: 12px 10px !important; gap: 12px !important; }
+.testimonials-avatar-box { transform: translate(10px, -18px) !important; }
+
+/* subtle accent on section titles */
+.article-title::after { height: 4px; width: 36px; background: linear-gradient(90deg,var(--orange-yellow-crayola),var(--vegas-gold)) !important; }
+
+/* navbar: lighter, more integrated */
+.navbar { background: rgba(255,255,255,0.92) !important; border: 1px solid rgba(11,17,28,0.03) !important; }
+
+/* input / form: stronger contrast */
+.form-input { background: #fff !important; color: var(--heading-text) !important; border: 1px solid rgba(11,17,28,0.04) !important; }
+
+/* reduce very large side margins on large screens */
+@media (min-width: 1250px) {
+  main { gap: 18px !important; }
+  .main-content { padding: 20px 18px !important; }
+  .sidebar { margin-left: 28px !important; margin-right: 8px !important; }
+}
+
+/* responsive tweak — keep it compact on tablet */
+@media (max-width: 900px) {
+  .sidebar { width: 100% !important; margin: 12px 12px !important; }
+  .main-content { padding: 14px !important; margin: 12px auto !important; }
+  .h2 { font-size: 26px !important; }
+}
+
+/* tiny utility: make icon colors crisper */
+.icon-box, .service-item .service-icon-box, .project-item-icon-box {
+  background: rgba(255,255,255,0.95) !important;
+  border: 1px solid rgba(11,17,28,0.03) !important;
+  color: var(--orange-yellow-crayola) !important;
+}
+
+/* final polish: remove any leftover dark overlay classes */
+.bg-dark, .bg-onyx, [style*="--bg-gradient-onyx"], [style*="background: var(--bg-gradient-onyx)"] {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ---------- end Balanced+ ---------- */
